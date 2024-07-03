@@ -1,0 +1,124 @@
+Copyright 1986-2019 Xilinx, Inc. All Rights Reserved.
+------------------------------------------------------------------------------------
+| Tool Version : Vivado v.2019.2 (win64) Build 2708876 Wed Nov  6 21:40:23 MST 2019
+| Date         : Tue Dec 27 20:22:02 2022
+| Host         : A4338-18 running 64-bit major release  (build 9200)
+| Command      : report_control_sets -verbose -file wrapper_control_sets_placed.rpt
+| Design       : wrapper
+| Device       : xc7a100t
+------------------------------------------------------------------------------------
+
+Control Set Information
+
+Table of Contents
+-----------------
+1. Summary
+2. Histogram
+3. Flip-Flop Distribution
+4. Detailed Control Set Information
+
+1. Summary
+----------
+
++----------------------------------------------------------+-------+
+|                          Status                          | Count |
++----------------------------------------------------------+-------+
+| Total control sets                                       |    46 |
+|    Minimum number of control sets                        |    46 |
+|    Addition due to synthesis replication                 |     0 |
+|    Addition due to physical synthesis replication        |     0 |
+| Unused register locations in slices containing registers |    26 |
++----------------------------------------------------------+-------+
+* Control sets can be merged at opt_design using control_set_merge or merge_equivalent_drivers
+** Run report_qor_suggestions for automated merging and remapping suggestions
+
+
+2. Histogram
+------------
+
++--------------------+-------+
+|       Fanout       | Count |
++--------------------+-------+
+| Total control sets |    46 |
+| >= 0 to < 4        |     2 |
+| >= 4 to < 6        |     1 |
+| >= 6 to < 8        |     0 |
+| >= 8 to < 10       |     0 |
+| >= 10 to < 12      |     0 |
+| >= 12 to < 14      |     0 |
+| >= 14 to < 16      |     0 |
+| >= 16              |    43 |
++--------------------+-------+
+* Control sets can be remapped at either synth_design or opt_design
+
+
+3. Flip-Flop Distribution
+-------------------------
+
++--------------+-----------------------+------------------------+-----------------+--------------+
+| Clock Enable | Synchronous Set/Reset | Asynchronous Set/Reset | Total Registers | Total Slices |
++--------------+-----------------------+------------------------+-----------------+--------------+
+| No           | No                    | No                     |              35 |           16 |
+| No           | No                    | Yes                    |               1 |            1 |
+| No           | Yes                   | No                     |               0 |            0 |
+| Yes          | No                    | No                     |             208 |           73 |
+| Yes          | No                    | Yes                    |               0 |            0 |
+| Yes          | Yes                   | No                     |              82 |           53 |
++--------------+-----------------------+------------------------+-----------------+--------------+
+
+
+4. Detailed Control Set Information
+-----------------------------------
+
++----------------------+----------------------------------------------+--------------------------+------------------+----------------+
+|     Clock Signal     |                 Enable Signal                |     Set/Reset Signal     | Slice Load Count | Bel Load Count |
++----------------------+----------------------------------------------+--------------------------+------------------+----------------+
+|  CLK100MHZ_IBUF_BUFG |                                              |                          |                1 |              1 |
+|  clk_i               |                                              | Processor/core/LSU/SR[0] |                1 |              1 |
+|  clk_i               | Processor/IC/p_0_in__0                       | Processor/core/SR[0]     |                1 |              5 |
+|  clk_i               | Processor/SW/E[0]                            |                          |                3 |             16 |
+|  clk_i               | Processor/core/CSR/enable2                   |                          |               10 |             32 |
+|  clk_i               | Processor/core/CSR/enable1                   |                          |               10 |             32 |
+|  clk_i               | Processor/core/CSR/stall_buff_reg_17         |                          |                8 |             32 |
+|  clk_i               | Processor/core/CSR/enable3                   |                          |               10 |             32 |
+|  clk_i               | Processor/core/CSR/stall_buff_reg            |                          |                8 |             32 |
+|  clk_i               | Processor/core/CSR/stall_buff_reg_0          |                          |                8 |             32 |
+|  clk_i               | Processor/core/CSR/stall_buff_reg_24         |                          |                8 |             32 |
+|  clk_i               | Processor/core/CSR/stall_buff_reg_19         |                          |                8 |             32 |
+|  clk_i               | Processor/core/CSR/stall_buff_reg_21         |                          |                8 |             32 |
+|  clk_i               | Processor/core/CSR/stall_buff_reg_22         |                          |                8 |             32 |
+|  clk_i               | Processor/core/CSR/stall_buff_reg_20         |                          |                8 |             32 |
+|  clk_i               | Processor/core/CSR/stall_buff_reg_23         |                          |                8 |             32 |
+|  clk_i               | Processor/core/CSR/stall_buff_reg_3          |                          |                8 |             32 |
+|  clk_i               | Processor/core/CSR/stall_buff_reg_27         |                          |                8 |             32 |
+|  clk_i               | Processor/core/CSR/stall_buff_reg_5          |                          |                8 |             32 |
+|  clk_i               | Processor/core/CSR/stall_buff_reg_7          |                          |                8 |             32 |
+|  clk_i               | Processor/core/CSR/stall_buff_reg_8          |                          |                8 |             32 |
+|  clk_i               | Processor/core/CSR/stall_buff_reg_6          |                          |                8 |             32 |
+|  clk_i               | Processor/core/CSR/stall_buff_reg_13         |                          |                8 |             32 |
+|  clk_i               | Processor/core/CSR/stall_buff_reg_11         |                          |                8 |             32 |
+|  clk_i               | Processor/core/CSR/stall_buff_reg_14         |                          |                8 |             32 |
+|  clk_i               | Processor/core/CSR/stall_buff_reg_1          |                          |                8 |             32 |
+|  clk_i               | Processor/core/CSR/stall_buff_reg_12         |                          |                8 |             32 |
+|  clk_i               | Processor/core/CSR/stall_buff_reg_25         |                          |                8 |             32 |
+|  clk_i               | Processor/core/CSR/stall_buff_reg_26         |                          |                8 |             32 |
+|  clk_i               | Processor/core/CSR/stall_buff_reg_9          |                          |                8 |             32 |
+|  clk_i               | Processor/core/CSR/stall_buff_reg_18         |                          |                8 |             32 |
+|  clk_i               | Processor/core/CSR/stall_buff_reg_2          |                          |                8 |             32 |
+|  clk_i               | Processor/core/CSR/stall_buff_reg_4          |                          |                8 |             32 |
+|  clk_i               | Processor/core/CSR/stall_buff_reg_16         |                          |                8 |             32 |
+|  clk_i               | Processor/core/CSR/stall_buff_reg_10         |                          |                8 |             32 |
+|  clk_i               | Processor/core/CSR/E[0]                      |                          |               14 |             32 |
+|  clk_i               | Processor/ram/PC_reg[11]_9[0]                |                          |               11 |             32 |
+|  clk_i               | Processor/IC/E[0]                            | Processor/core/LSU/SR[0] |               31 |             32 |
+|  clk_i               | Processor/core/CSR/stall_buff_reg_15         |                          |                8 |             32 |
+|  clk_i               | Processor/core/CSR/buffer_4[31]_i_1_n_0      |                          |               15 |             32 |
+|  clk_i               | Processor/core/RegisterFile/stall_buff_reg   |                          |                8 |             32 |
+|  clk_i               | Processor/core/RegisterFile/stall_buff_reg_1 |                          |                8 |             32 |
+|  clk_i               | Processor/core/RegisterFile/stall_buff_reg_0 |                          |                8 |             32 |
+|  clk_i               |                                              |                          |               15 |             34 |
+|  clk_i               | Processor/core/LSU/stall_buff_reg_1          | Processor/core/LSU/SR[0] |               21 |             45 |
+|  clk_i               | Processor/core/CSR/gpr_we_a_o                |                          |               12 |             96 |
++----------------------+----------------------------------------------+--------------------------+------------------+----------------+
+
+
